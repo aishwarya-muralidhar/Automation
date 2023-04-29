@@ -22,7 +22,12 @@ time.sleep(2)
 driver.find_element(by = By.NAME, value= "login").click()
 time.sleep(15)
 
-actual_title = driver.find_element(By.XPATH, "//span[@class='x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x4zkp8e x3x7a5m x6prxxf xvq8zen x1s688f x1qq9wsj']").text
+try:
+    actual_title = driver.find_element(By.XPATH, "//span[@class='x193iq5w xeuugli x13faqbe x1vvkbs xlh3980 xvmahel x1n0sxbx x1lliihq x1s928wv xhkezso x1gmr53x x1cpjm7i x1fgarty x1943h6x x4zkp8e x3x7a5m x6prxxf xvq8zen x1s688f x1qq9wsj']").text
+except:
+    actual_title = ""
+    print("Got exception")
+
 expected_title = "Stories"
 if expected_title == actual_title:
     print("Test case passed")
