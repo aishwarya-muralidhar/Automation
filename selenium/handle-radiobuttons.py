@@ -22,8 +22,8 @@ time.sleep(3)
 radio_male = driver.find_element(By.XPATH, "//input[@id='gender-male']")
 radio_female = driver.find_element(By.XPATH, "//input[@id='gender-female']")
 
-#Check the default status of radiobuttons using is_selected() and print the value
-print("Default status of radiobutton:")
+#Check the default status of radiobuttons using is_selected() and print the value in console
+print("Status of radiobuttons by default:")
 print(radio_male.is_selected())
 print(radio_female.is_selected())
 
